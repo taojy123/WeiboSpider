@@ -16,7 +16,7 @@ opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj))
 #opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cj), urllib2.ProxyHandler({'http':"10.239.120.37:911"}))
 opener.addheaders = [
                     ("Accept","text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"),
-                    ("Accept-Encoding","gzip,deflate,sdch"),
+                    # ("Accept-Encoding","gzip,deflate,sdch"),
                     ("Accept-Language","zh-CN,zh;q=0.8,zh-TW;q=0.6,en;q=0.4"),
                     ("Cache-Control","max-age=0"),
                     ("Cookie","TC-Page-G0=e2379342ceb6c9c8726a496a5565689e; SUB=_2AkMiV0sAdcNhrAJQm_4czm_rb45Pjlmr45_wMk3sJxEzHhl_7T9l_xxrtXG-79OLSL7AcpgsgYXazcCRyk8-; SUBP=0033WrSXqPxfM72wWs9jqgMF55529P9D9WWdv9aAphFaXjOIqMsvPocH5JpVFGxydcD4eKz0; TC-Ugrow-G0=968b70b7bcdc28ac97c8130dd353b55e; _s_tentry=-; Apache=1236543264240.0264.1426834633528; SINAGLOBAL=1236543264240.0264.1426834633528; ULV=1426834633665:1:1:1:1236543264240.0264.1426834633528:"),
@@ -139,8 +139,6 @@ else:
 while True:
     print "======================================="
     keyword = raw_input("search:").strip()
-    if not keyword:
-        break
 
     result = []
     for r in total:
